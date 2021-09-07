@@ -1,0 +1,7 @@
+@import '../../styles/global.scss';
+
+.title {
+  @include header-default;
+  @include centralize;
+  // color: $title;
+}

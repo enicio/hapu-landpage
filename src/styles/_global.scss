@@ -1,0 +1,15 @@
+$title: red;
+
+$fontPrincipal: 'Inter';
+
+@mixin header-default {
+  color: rgb(226, 226, 226);
+  padding: 2em;
+  width: 3em;
+  background-color: rgb(251, 124, 5);
+}
+
+@mixin centralize {
+  margin-left: auto;
+  margin-right: auto;
+}
