@@ -1,4 +1,4 @@
-import Title from './title/title.jsx'
 import Header from './header/header.jsx'
+import Hero from './hero/hero'
 
-export { Title, Header };
+export { Header, Hero };

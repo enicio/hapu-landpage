@@ -5,6 +5,7 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: flex-end;
+	width: 100%;
 	&__button{
 		background: #00A870;
 		border-radius: 4px;
@@ -12,13 +13,9 @@
 		width: 234px;
 		height: 44px;
 		border: none;
-
-		font-family: $fontPrincipal;
-		font-style: normal;
-		font-weight: 500;
+		@include default-text;
 		font-size: 14px;
 		line-height: 20px;
 		text-align: center;
-		color: #FFFFFF;
 	}
 }
