@@ -30,7 +30,7 @@
 			text-decoration-line: underline;
 		}
 	}
-  background-image: url('../../assets/images/hero-background.png'), linear-gradient(314.72deg, #C86DD7 -1.5%, #7E49C3 39.43%, #5912AC 86.02%);
+  	background-image: url('../../assets/images/hero-background.png'), $linear-gradient;
 	background-size: cover;
 	height: 540px;
 }
