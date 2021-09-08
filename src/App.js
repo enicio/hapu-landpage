@@ -1,5 +1,5 @@
 import './App.css';
-import  { Hero, PageContent } from './components';
+import  { Hero, PageContent, SubscribeForm } from './components';
 import NannyAvailable from './components/nannyAvailable/nannyAvailable';
 import contents from './utils/info';
 
@@ -11,6 +11,7 @@ function App() {
       <NannyAvailable />
       <PageContent props={ contents.section1 } />
       <PageContent props={ contents.section2 } />
+      <SubscribeForm />
       <PageContent props={ contents.section3 } />
       <PageContent props={ contents.section4 } />
       <PageContent props={ contents.section5 } />
