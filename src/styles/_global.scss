@@ -16,3 +16,24 @@ $fontPrincipal: 'Inter';
   text-align: center;
   color: #FFFFFF;
 }
+
+@mixin paragraph {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #3D3D3D;
+}
+
+@mixin link {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #5E20A4;
+}

@@ -1,0 +1,23 @@
+@import '../../styles/global';
+
+.content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 90%;
+  h2 {
+		font-family: Inter;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 32px;
+		text-align: center;
+		color: #3D3D3D;
+	}
+	p {
+		@include paragraph
+	}
+	a {
+		@include link
+	}
+}
