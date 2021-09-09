@@ -2,13 +2,14 @@ form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 	input {
 		margin-bottom: 1em;
 		background: #FFFFFF;
 		border: 1px solid #DFDFDF;
 		box-sizing: border-box;
 		border-radius: 4px;
-		width: 328px;
+		width: 90%;
 		height: 48px;
 		&[type="submit"] {
 			background: #00A870;
