@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import api from '../../services/handleFetch'
+import StatusSubscribe from "../statusSubscribe/statusSubscribe";
 import './form.scss';
 
 function SubscribeForm() {
@@ -27,16 +28,16 @@ function handleChange({ target}) {
 	);
 }
 
-if(successSubmit) return <h1>Thanks for Subscribe</h1>;
-if(loading) return <h1>Sending..</h1>
-if(errorStatus) return <h1>Something goes wrong, try again in a few minutes</h1>;
+if(successSubmit) return <StatusSubscribe message="Thanks form subscribe!"/>;
+if(loading) return <StatusSubscribe message="Sending..."/>;
+if(errorStatus) return <StatusSubscribe message="Somethings goes wrong, try again in a few minutes."/>;
 
 	return (
 		<form onSubmit={handleSubmit}>
 			<input onChange={ handleChange} type="text" name="name" />
 			<input onChange={ handleChange} type="email" name="email"/>
 			<input type="submit" value="Send"/>
-      <hr/>
+			<hr/>
 		</form>
 	)
 }

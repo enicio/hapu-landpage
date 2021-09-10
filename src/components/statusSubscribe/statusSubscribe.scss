@@ -1,0 +1,21 @@
+@import '../../styles/global.scss';
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+	width: 100%;
+	background: #FAF9F7;
+	height: 15em;
+  h2 {
+    @include default-text;
+    color: #3D3D3D;
+  }
+  hr {
+    border: 2px solid #DFDFDF;
+		text-align: center;
+		width: 90%;
+		margin-top: 50px;
+  }
+}
