@@ -1,22 +1,16 @@
 import React, { useState } from "react";
-import api from '../../services/handleFetch'
+import useFetch from "../../hooks/useFfetch";
 import StatusSubscribe from "../statusSubscribe/statusSubscribe";
 import './form.scss';
 
 function SubscribeForm() {
 	const [ inputField, setInputField ] = useState({});
-	const [ errorStatus, setErrorStatus ] = useState(false);
-	const [ successSubmit, setSuccessSubmit ] = useState(false);
-	const [loading, setLoading ] = useState(false);
+	const { errorStatus, successSubmit, loading, Post } = useFetch()
 
 function handleSubmit(e) {
 	e.preventDefault()
 	console.log(inputField);
-	setLoading(true)
-	api.post('/challenge-newsletter/', inputField)
-		.then(Response => console.log(Response.status) || setSuccessSubmit(true))
-		.catch(error => console.log(error.response.status) || setErrorStatus(true))
-		.finally(() => setLoading(false))
+	Post('/challenge-newsletter/', inputField)
 }
 
 function handleChange({ target}) {
