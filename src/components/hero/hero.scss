@@ -8,34 +8,56 @@
 	background-image: url('../../assets/images/hero-background.png'), $linear-gradient;
 	background-size: cover;
 	height: 540px;
-	&__content {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		margin-top: 2em;
-		h1 {
-			@include default-text;
-			font-size: 28px;
-			width: 70%;
-			margin-top: 3rem
+	&__image {
+		display: none;
+		@media (min-width: $breakpoint-tablet) {
+			display: inline;
+			width: 316px;
+			height: 290px;
+			margin: auto;
 		}
-		p {
-			@include default-text;
-			line-height: 28px;
-			font-size: 16px;
-			width: 90%;
-		}
-		&__playbutton {
-			width: 90%;
+	}
+	&__container{
+		width: 100%;
+		@media (min-width: $breakpoint-tablet) {
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
+			margin-top: 2.4em;
+
+		}
+		&__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			align-items: center;
-			a {
+			margin-top: 2em;
+			@media (min-width: $breakpoint-tablet) {
+				width: 30vw;
+				margin: auto;
+			}
+			h1 {
 				@include default-text;
+				font-size: 28px;
+				width: 70%;
+				margin-top: 3rem
+			}
+			p {
+				@include default-text;
+				line-height: 28px;
 				font-size: 16px;
-				line-height: 24px;
-				text-decoration-line: underline;
+				width: 90%;
+			}
+			&__playbutton {
+				width: 90%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				a {
+					@include default-text;
+					font-size: 16px;
+					line-height: 24px;
+					text-decoration-line: underline;
+				}
 			}
 		}
 	}

@@ -1,3 +1,5 @@
+@import '../../styles/global.scss';
+
 form {
 	display: flex;
 	flex-direction: column;
@@ -5,6 +7,11 @@ form {
 	width: 100%;
 	background: #FAF9F7;
 	height: 15em;
+	@media (min-width: $breakpoint-tablet) {
+		flex-direction: row;
+		justify-content: center;
+		// width: 80%;
+	}
 	input {
 		margin-bottom: 1em;
 		background: #FFFFFF;
@@ -13,6 +20,10 @@ form {
 		border-radius: 4px;
 		width: 90%;
 		height: 48px;
+		@media (min-width: $breakpoint-tablet) {
+			width: 20em;
+			margin: 0 0.5em ;
+		}
 		&[type="submit"] {
 			background: #00A870;
 			border-radius: 4px;
@@ -26,10 +37,10 @@ form {
 			color: #FFFFFF;
 		}
 	}
-  hr {
-		border: 2px solid #DFDFDF;
-		text-align: center;
-		width: 90%;
-		margin-top: 50px;
-	}
+}
+hr {
+	border: 2px solid #DFDFDF;
+	text-align: center;
+	width: 90%;
+	margin-top: -24px;
 }

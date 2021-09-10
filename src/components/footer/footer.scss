@@ -60,8 +60,13 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    height: 300px;
+    height: 320px;
     width: 100%;
+    @media (min-width: $breakpoint-tablet) {
+			flex-direction: row;
+      height: 300px;
+      width: 90vw;
+		}
     &__institutional {
       @include default-text;
       display: flex;
@@ -78,6 +83,9 @@
       display: flex;
       justify-content: space-around;
       width: 70%;
+      @media (min-width: $breakpoint-tablet) {
+        width: 250px;
+      }
     }
   }
   &__botton {

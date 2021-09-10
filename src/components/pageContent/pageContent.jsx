@@ -2,31 +2,35 @@ import React from "react";
 import './pageContent.scss'
 
 //https://create-react-app.dev/docs/using-the-public-folder
-function PageContent({ content, separator }) {
+function PageContent({ content, separator, contentflux }) {
 	return (
-    <>
-		<section className="content">
-			{content.image
-				? <img src={`/assets/images/${content.image}`} alt={content.alt} />
-				: ''
-			}
-			<h2>
-				{content.title}
-			</h2>
-			<p>
-				{content.content}
-			</p>
-			{content.link
-				?<a href="#section">{content.link}</a>
-				: ''
-			}
+		<section className="container">
+			<div className={`container__contentflux${contentflux} container__content`}>
+				<div className="container__content__image">
+					{content.image
+						? <img src={`/assets/images/${content.image}`} alt={content.alt} />
+						: ''
+					}
+				</div>
+				<div className="container__content__text" >
+					<h2>
+						{content.title}
+					</h2>
+					<p>
+						{content.content}
+					</p>
+					{content.link
+						?<a href="#section">{content.link}</a>
+						: ''
+					}
+				</div>
+			</div>
 			{
         (separator)
           ? <hr/>
           : ''
 			}
 		</section>
-    </>
 	)
 }
 

@@ -10,12 +10,12 @@ function App() {
     <div className="App">
       <Hero />
       <NannyAvailable />
-      <PageContent separator={true} content={ contents.section1 } />
-      <PageContent separator={false} content={ contents.section2 } />
+      <PageContent separator={true} content={ contents.section1 } contentflux={'Left'} />
+      <PageContent separator={false} content={ contents.section2 } contentflux={'Center'} />
       <SubscribeForm />
-      <PageContent separator={true} content={ contents.section3 } />
-      <PageContent separator={true} content={ contents.section4 } />
-      <PageContent separator={false} content={ contents.section5 } />
+      <PageContent separator={true} content={ contents.section3 } contentflux={'Rigth'} />
+      <PageContent separator={true} content={ contents.section4 } contentflux={'Rigth'} />
+      <PageContent separator={false} content={ contents.section5 } contentflux={'Center'} />
       <Footer />
     </div>
   );

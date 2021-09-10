@@ -1,26 +1,65 @@
 @import '../../styles/global';
 
-.content {
+.container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
 	background: #FAF9F7;
 	padding-top: 3em;
-	// padding-bottom: 50px;
-  h2 {
-		font-family: Inter;
-		font-style: normal;
-		font-weight: 500;
-		font-size: 22px;
-		line-height: 32px;
-		text-align: center;
-		color: #3D3D3D;
-		margin-top: 0;
-    width: 60%;
+	&__contentfluxRigth {
+		flex-direction: column;
+		@media (min-width: $breakpoint-tablet) {
+			flex-direction: row;
+			width: 80%;
+			// background-color: red;
+		}
 	}
-	img {
-		margin-bottom: 3em;
+	&__contentfluxLeft {
+		flex-direction: column;
+		@media (min-width: $breakpoint-tablet) {
+			flex-direction: row-reverse;
+			width: 80%;
+			// background-color: rgb(0, 68, 255);
+		}
+	}
+	&__contentfluxCenter {
+		flex-direction: column;
+		@media (min-width: $breakpoint-tablet) {
+			flex-direction: column;
+			width: 80%;
+			// background-color: rgb(0, 68, 255);
+		}
+	}
+	&__content {
+		display: flex;
+		// flex-direction: column;
+		align-items: center;
+		// @media (min-width: $breakpoint-tablet) {
+		// 	flex-direction: row;
+		// 	width: 80%;
+		// }
+		&__text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			h2 {
+				font-family: Inter;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 22px;
+				line-height: 32px;
+				text-align: center;
+				color: #3D3D3D;
+				margin-top: 0;
+				width: 60%;
+			}
+		}
+	}
+	&__image {
+		img {
+			margin-bottom: 3em;
+		}
 	}
 	p {
 		@include paragraph
