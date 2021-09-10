@@ -1,11 +1,44 @@
 @import '../../styles/global.scss';
+$breakpoint-tablet: 768px;
 
 .header {
 	margin: 0 0.5rem;
 	display: flex;
 	justify-content: space-around;
-	align-items: flex-end;
+	align-items: center;
 	width: 100%;
+	&__section {
+		display: flex;
+		width: 55vw;
+		margin: 0 2em;
+		&__navlink {
+			display: none;
+			@media (min-width: $breakpoint-tablet) {
+				display: inline;
+				ul {
+					display: flex;
+					justify-content: space-ar;
+					list-style: none;
+					li {
+						a{
+							@include link;
+							color: #fff;
+							text-decoration: none;
+							margin: 0 0.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__signin {
+		display: none;
+		@media (min-width: $breakpoint-tablet) {
+			display: inline;
+			@include default-text;
+			margin: 0.3em 0.8em;
+		}
+	}
 	&__button{
 		background: #00A870;
 		border-radius: 4px;
@@ -14,8 +47,11 @@
 		height: 44px;
 		border: none;
 		@include default-text;
-		font-size: 14px;
+		font-size: 13px;
 		line-height: 20px;
 		text-align: center;
+		@media (min-width: $breakpoint-tablet) {
+			margin-left: 40%;
+		}
 	}
 }

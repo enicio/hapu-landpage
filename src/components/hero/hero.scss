@@ -5,32 +5,38 @@
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	h1 {
-		@include default-text;
-		font-size: 28px;
-		width: 70%;
-		margin-top: 3rem
-	}
-	p {
-		@include default-text;
-		line-height: 28px;
-		font-size: 16px;
-		width: 90%;
-	}
-	div {
-		margin-top: 4rem;
-		width: 90%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		a {
-			@include default-text;
-			font-size: 16px;
-			line-height: 24px;
-			text-decoration-line: underline;
-		}
-	}
-  	background-image: url('../../assets/images/hero-background.png'), $linear-gradient;
+	background-image: url('../../assets/images/hero-background.png'), $linear-gradient;
 	background-size: cover;
 	height: 540px;
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 2em;
+		h1 {
+			@include default-text;
+			font-size: 28px;
+			width: 70%;
+			margin-top: 3rem
+		}
+		p {
+			@include default-text;
+			line-height: 28px;
+			font-size: 16px;
+			width: 90%;
+		}
+		&__playbutton {
+			width: 90%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			a {
+				@include default-text;
+				font-size: 16px;
+				line-height: 24px;
+				text-decoration-line: underline;
+			}
+		}
+	}
 }

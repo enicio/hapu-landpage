@@ -2,7 +2,6 @@ import { useState } from 'react';
 import api from '../services/handleFetch'
 
 function useFetch() {
-  // const [ inputField, setInputField ] = useState({});
 	const [ errorStatus, setErrorStatus ] = useState(false);
 	const [ successSubmit, setSuccessSubmit ] = useState(false);
 	const [loading, setLoading ] = useState(false);
@@ -15,7 +14,7 @@ function useFetch() {
       .finally(() => setLoading(false))
   }
 
-    return { errorStatus, successSubmit, loading, Post}
+  return { errorStatus, successSubmit, loading, Post}
 }
 
 export default useFetch;
