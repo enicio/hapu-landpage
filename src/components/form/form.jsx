@@ -36,6 +36,7 @@ if(errorStatus) return <h1>Something goes wrong, try again in a few minutes</h1>
 			<input onChange={ handleChange} type="text" name="name" />
 			<input onChange={ handleChange} type="email" name="email"/>
 			<input type="submit" value="Send"/>
+      <hr/>
 		</form>
 	)
 }

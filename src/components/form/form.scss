@@ -3,6 +3,7 @@ form {
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	background: #FAF9F7;
 	input {
 		margin-bottom: 1em;
 		background: #FFFFFF;
@@ -21,11 +22,13 @@ form {
 			font-size: 14px;
 			line-height: 20px;
 			text-align: center;
-
-			/* White */
-
 			color: #FFFFFF;
-
 		}
+	}
+  hr {
+		border: 2px solid #DFDFDF;
+		text-align: center;
+		width: 90%;
+		margin-top: 50px;
 	}
 }

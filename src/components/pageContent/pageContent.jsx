@@ -2,25 +2,31 @@ import React from "react";
 import './pageContent.scss'
 
 //https://create-react-app.dev/docs/using-the-public-folder
-function PageContent({ props }) {
+function PageContent({ content, separator }) {
 	return (
+    <>
 		<section className="content">
-			{props.image
-				? <img src={`/assets/images/${props.image}`} alt={props.alt} />
+			{content.image
+				? <img src={`/assets/images/${content.image}`} alt={content.alt} />
 				: ''
 			}
 			<h2>
-				{props.title}
+				{content.title}
 			</h2>
 			<p>
-				{props.content}
+				{content.content}
 			</p>
-			{props.link
-				?<a href="#section">{props.link}</a>
+			{content.link
+				?<a href="#section">{content.link}</a>
 				: ''
 			}
-			<hr/>
+			{
+        (separator)
+          ? <hr/>
+          : ''
+			}
 		</section>
+    </>
 	)
 }
 

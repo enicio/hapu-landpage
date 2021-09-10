@@ -27,6 +27,7 @@ $linear-gradient: linear-gradient(314.72deg, #C86DD7 -1.5%, #7E49C3 39.43%, #591
   line-height: 28px;
   text-align: center;
   color: #3D3D3D;
+  width: 90%;
 }
 
 @mixin link {
@@ -38,4 +39,5 @@ $linear-gradient: linear-gradient(314.72deg, #C86DD7 -1.5%, #7E49C3 39.43%, #591
   text-align: center;
   text-decoration-line: underline;
   color: #5E20A4;
+  width: 80%;
 }
