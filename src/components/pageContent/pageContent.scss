@@ -12,7 +12,6 @@
 		@media (min-width: $breakpoint-tablet) {
 			flex-direction: row;
 			width: 80%;
-			// background-color: red;
 		}
 	}
 	&__contentfluxLeft {
@@ -20,7 +19,6 @@
 		@media (min-width: $breakpoint-tablet) {
 			flex-direction: row-reverse;
 			width: 80%;
-			// background-color: rgb(0, 68, 255);
 		}
 	}
 	&__contentfluxCenter {
@@ -28,7 +26,6 @@
 		@media (min-width: $breakpoint-tablet) {
 			flex-direction: column;
 			width: 80%;
-			// background-color: rgb(0, 68, 255);
 		}
 	}
 	&__contentfluxBotton {
@@ -47,20 +44,13 @@
 	}
 	&__content {
 		display: flex;
-		// flex-direction: column;
 		align-items: center;
-		// @media (min-width: $breakpoint-tablet) {
-		// 	flex-direction: row;
-		// 	width: 80%;
-		// }
 		&__text {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			h2 {
-				font-family: Inter;
-				font-style: normal;
-				font-weight: 500;
+				@include default-text;
 				font-size: 22px;
 				line-height: 32px;
 				text-align: center;

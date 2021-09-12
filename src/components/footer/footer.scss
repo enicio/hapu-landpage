@@ -89,9 +89,7 @@
     }
   }
   &__botton {
-    font-family: Inter;
-    font-style: normal;
-    font-weight: normal;
+    @include default-text;
     font-size: 12px;
     line-height: 16px;
     text-align: right;
