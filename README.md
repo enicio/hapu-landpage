@@ -1,7 +1,7 @@
 <h1 align="center" >Hapu landing page</h1>
 
 <p align="center" >
-<img src="https://ucarecdn.com/188cffd1-146a-4a39-b781-4f5d23dc8ff9/-/preview/-/quality/smart/"/>
+<img src="https://ucarecdn.com/cef4e748-cd9e-418f-b22d-09098b36133e/-/preview/-/quality/smart/"/>
 <img src="https://ucarecdn.com/867c69e6-e3b5-407e-9719-cd67b5ce9147/-/preview/-/quality/smart/"/>
 
 </p>
@@ -34,7 +34,7 @@ install the dependencies
   yarn install
 ```
 
-Start
+Start the project
 
 ```bash
   yarn start
@@ -47,7 +47,7 @@ Start
 
 ## Tests
 
-To run tests
+Run all tests
 ```bash
   yarn test
 ```
