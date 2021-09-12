@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import api from '../services/handleFetch'
+//import api from '../services/handleFetch';
+import axios from 'axios';
 
 function useFetch() {
 	const [ errorStatus, setErrorStatus ] = useState(false);
@@ -8,7 +9,7 @@ function useFetch() {
 
   function Post(url, inputField) {
     setLoading(true)
-    api.post(`${url}`, inputField)
+    axios.post(`${url}`, inputField)
       .then(Response => console.log(Response.status) || setSuccessSubmit(true))
       .catch(error => console.log(error.response.status) || setErrorStatus(true))
       .finally(() => setLoading(false))

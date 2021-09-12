@@ -30,7 +30,7 @@ const contents = {
 				  viability and success. That’s why we’ve defined Hapu around our three tribal principles; clearly
 				  defined process, transparency over money and equality of participation.`,
 		link: 'Read how Hapu’s tribal background defines our app ',
-		image: false
+		image: 'ImageSection4.png'
 	},
 	section5: {
 		title: 'Coming soon: Nanny Share Daily Diary!',
