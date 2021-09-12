@@ -10,8 +10,8 @@ function useFetch() {
   function Post(url, inputField) {
     setLoading(true)
     axios.post(`${url}`, inputField)
-      .then(Response => console.log(Response.status) || setSuccessSubmit(true))
-      .catch(error => console.log(error.response.status) || setErrorStatus(true))
+      .then(Response => setSuccessSubmit(true))
+      .catch(error => setErrorStatus(true))
       .finally(() => setLoading(false))
   }
 

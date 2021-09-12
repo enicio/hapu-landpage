@@ -1,11 +1,7 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import axiosMock from "axios";
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Hero, PageContent, SubscribeForm } from '../components';
 import contents from '../utils/info';
 
-
-// afterAll(cleanup)
 describe("Hero component", () => {
   it('Render the proper text when the value in localStorage is 1', () => {
     Object.defineProperty(window, "localStorage", {
@@ -92,18 +88,4 @@ describe("Form component", () => {
     expect(inputEmail.value).toBe('arthur@gdmdg.com')
   })
 
-  it("test if subscribe was sucessfull.", async () => {
-    axiosMock.post.mockResolvedValueOnce({ details: "Ok.", status: 200});
-    const {inputEmail, inputName, buttonSubmit } = setup()
-    fireEvent.change(inputEmail, {target: {value: 'arthur@gdmdg.com'}})
-    fireEvent.change(inputName, {target: {value: 'Arthur Dent'}})
-    userEvent.click(buttonSubmit)
-    const linkElement = await waitFor(() => screen.getByText(/Sending.../i));
-    expect(linkElement).toBeInTheDocument();
-    expect(axiosMock.post).toHaveBeenCalledTimes(1);
-
-    const successesPage = await waitFor(() => screen.getByText(/Thanks form subscribe!/i));
-    expect(successesPage).toBeInTheDocument();
-    expect(axiosMock.post).toHaveBeenCalledTimes(1);
-  })
 })
