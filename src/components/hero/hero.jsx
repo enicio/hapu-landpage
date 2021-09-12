@@ -5,15 +5,12 @@ import './hero.scss'
 
 function Hero() {
   const [userCase, setUserCase ] = useState(parseInt(localStorage.getItem('userCase')));
-  console.log(userCase);
 
   useEffect(() => {
     if( isNaN(userCase)) {
-      console.log('ops')
       const number = Math.random() * 2;
       localStorage.setItem('userCase', number.toFixed() );
       setUserCase(parseInt(localStorage.getItem('userCase')))
-      console.log(number.toFixed())
     }
   },[userCase]);
 

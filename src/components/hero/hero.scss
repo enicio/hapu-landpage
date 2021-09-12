@@ -8,6 +8,9 @@
 	background-image: url('../../assets/images/hero-background.png'), $linear-gradient;
 	background-size: cover;
 	height: 540px;
+	@media (min-width: $breakpoint-tablet) {
+		background-image: url('../../assets/images/hero-background-desktop.png'), $linear-gradient;
+	}
 	&__image {
 		display: none;
 		@media (min-width: $breakpoint-tablet) {

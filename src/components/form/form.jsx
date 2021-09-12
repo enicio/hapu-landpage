@@ -9,7 +9,6 @@ function SubscribeForm() {
 
 function handleSubmit(e) {
 	e.preventDefault()
-	console.log(inputField);
 	Post('https://api.jungledevs.com/api/v1/challenge-newsletter/', inputField)
 }
 
