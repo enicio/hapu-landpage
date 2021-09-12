@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Header } from "..";
 import play_button from '../../assets/svg/Play_button.svg';
+import imageHeader from '../../assets/images/ImageHeader.png'
 import './hero.scss'
 
 function Hero() {
@@ -32,7 +33,7 @@ function Hero() {
             <a href="#section" >See hapu in action (27 seconds)</a>
           </div>
         </div>
-        <img className="hero__image" src={`/assets/images/ImageHeader.png`} alt="exemple of nanny share" />
+        <img className="hero__image" src={imageHeader} alt="exemple of nanny share" />
       </div>
     </section>
   )
