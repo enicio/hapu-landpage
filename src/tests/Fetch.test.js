@@ -22,11 +22,15 @@ describe("Form component", () => {
   }
 
   it("test if subscribe was sucessfull.", async () => {
-    axios.post.mockImplementationOnce(() => Promise.resolve({status: 200}));
+      axios.post.mockImplementationOnce(() =>
+      Promise.resolve({status: 200})
+    );
+
     const {inputEmail, inputName, buttonSubmit } = setup()
     fireEvent.change(inputEmail, {target: {value: 'arthur@gdmdg.com'}})
     fireEvent.change(inputName, {target: {value: 'Arthur Dent'}})
     fireEvent.click(buttonSubmit)
+
     const linkElement = await waitFor(() => screen.getByText(/Sending.../i));
     expect(linkElement).toBeInTheDocument();
 
@@ -44,6 +48,7 @@ describe("Form component", () => {
     fireEvent.change(inputEmail, {target: {value: 'arthur@gdmdg.com'}})
     fireEvent.change(inputName, {target: {value: 'Arthur Dent'}})
     fireEvent.click(buttonSubmit)
+
     const linkElement = await waitFor(() => screen.getByText(/Sending.../i));
     expect(linkElement).toBeInTheDocument();
 
