@@ -28,8 +28,8 @@ if(errorStatus) return <StatusSubscribe message="Somethings goes wrong, try agai
 	return (
 		<>
 			<form onSubmit={handleSubmit}>
-				<input onChange={ handleChange} type="text" name="name" aria-label="name-input" required/>
-				<input onChange={ handleChange} type="email" name="email" aria-label="email-input" required/>
+				<input onChange={ handleChange} placeholder="your name" type="text" name="name" aria-label="name-input" required/>
+				<input onChange={ handleChange} placeholder="your email" type="email" name="email" aria-label="email-input" required/>
 				<input type="submit" value="Send"/>
 			</form>
 			<hr/>
