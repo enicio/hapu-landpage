@@ -2,7 +2,7 @@ import React from "react";
 import './pageContent.scss'
 
 // I'm not sure about use Public folder to put images.
-//In this case I used because I needed dynamically import when renders the component. 
+//In this case I used because I needed dynamically import when renders the component.
 //How can see in the last topic in the link below
 //https://create-react-app.dev/docs/using-the-public-folder
 function PageContent({ content, separator, contentflux }) {

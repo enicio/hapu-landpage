@@ -13,7 +13,7 @@ function App() {
       <PageContent separator={true} content={ contents.section1 } contentflux={'Left'} />
       <PageContent separator={false} content={ contents.section2 } contentflux={'Center'} />
       <SubscribeForm />
-      <PageContent separator={true} content={ contents.section3 } contentflux={'Rigth'} />
+      <PageContent separator={true} content={ contents.section3 } contentflux={'Right'} />
       <PageContent separator={true} content={ contents.section4 } contentflux={'Botton'} />
       <PageContent separator={false} content={ contents.section5 } contentflux={'Center'} />
       <Footer />
