@@ -25,7 +25,7 @@ const contents = {
 		alt: "Example of price in the application"
 	},
 	section4: {
-		title: 'framework built for the long term',
+		title: 'A framework built for the long term',
 		content: `Childcare is for the long term. And you need a framework you can count on that gives your share long
 				  viability and success. That’s why we’ve defined Hapu around our three tribal principles; clearly
 				  defined process, transparency over money and equality of participation.`,
