@@ -10,9 +10,7 @@ function PageContent({ content, separator, contentflux }) {
 		<section className="container">
 			<div className={`container__contentflux${contentflux} container__content`}>
 				<div className="container__content__image">
-					{content.image
-						? <img src={`/assets/images/${content.image}`} alt={content.alt} />
-						: ''
+					{content.image && <img src={`/assets/images/${content.image}`} alt={content.alt} />
 					}
 				</div>
 				<div className="container__content__text" >
@@ -22,16 +20,12 @@ function PageContent({ content, separator, contentflux }) {
 					<p>
 						{content.content}
 					</p>
-					{content.link
-						?<a href="#section">{content.link}</a>
-						: ''
+					{content.link && <a href="#section">{content.link}</a>
 					}
 				</div>
 			</div>
 			{
-        (separator)
-          ? <hr/>
-          : ''
+        separator && <hr/>
 			}
 		</section>
 	)
